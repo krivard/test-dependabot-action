@@ -20,6 +20,6 @@ jobs:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Assign team to PR
-        run: gh pr edit "$PR_URL" --add-reviewer "krivard"
+        run: gh pr edit "$PR_URL" --add-reviewer "cmu-delphi/code-reviewers"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
